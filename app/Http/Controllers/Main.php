@@ -8,6 +8,8 @@ use Illuminate\Support\Facades\DB;
 class Main extends Controller
 {
     public function index(){
+        $albums =  DB::SELECT("SELECT * FROM albums");
+        $photos = DB::SELECT("SELECT * FROM photos");
         return view('index');
     }
 
